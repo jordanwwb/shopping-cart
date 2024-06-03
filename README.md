@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Shopping Cart Readme
+A simple shopping cart application built with Reactjs and Tailwindcss. It provides the basic functionality to display available items, add items to cart and remove items from cart.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
+- A ​main page​ that show multiple products
+- When product page is clicked, it will go to a separate product ​detail page​
+- Product ​detail page​ will have add to cart
+- When "​Add to cart button​" is clicked, it will update the cart icon to have number of the product in the cart
+- A ​cart page​ will list the products which are added to the cart
+- Cart page will calculate the total amount needed to be paid
+- Cart will allow the change of quantity and removal of products
+- Please use ReactJs for this assignment
+- Please use https://fakestoreapi.com for retrieval of products
 
-## Available Scripts
+## Installations
+1. Ensure Node.js (v14 or higher) is correctly installed
+2. Clone the repository
+    ```
+    git clone https://github.com/jordanwwb/shopping-cart.git
+    cd shopping-cart
+    ```
+3. Install dependencies
+    ```
+    npm install
+    ```
+4. Run the application
+    ```
+    npm run start
+    ```
+5. Application will be running at `http://localhost:3000`
 
-In the project directory, you can run:
+## Testing
+- To run tests
+    ```
+    npm test
+    ```
+## Project Structure
 
-### `npm start`
+- src/: contains the source code.
+    - apis/: Reusable API management.
+    - components/: Reusable UI components.
+    - context/: Context for state management.
+    - pages/: Main pages of the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Assumptions
+- Logging in is not required
+- Users are able to add to cart without logging into an account
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technical decisions
+- Instead of saving the cart item details on a Database, i have decided to use context to store these infromation. This is due to the assumption that logging in would not be required. However, on a security standpoint it might be better to save the cart on a secured Database instead.
+- JS packages
+    - react-zoom-pan-pinch
+        - This package was choosen due to its intuitive and customizable way to handle zooming, panning, and pinching actions within the application. It enhances user interaction, especially for viewing product images in detail, making the application more user-friendly and interactive.
+    - react-responsive-carousel
+        - This package was choosen to display the product images in a clean and reponsive manner.
+    - react-icons
+        - This package provide various popular icons, allowing easy integration and customization of icons.
