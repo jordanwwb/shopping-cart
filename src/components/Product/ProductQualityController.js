@@ -3,7 +3,6 @@ import { CartContext } from '../../context/CartContext';
 
 const ProductQualityController = ({ cartItem }) => {
   const { addToCart, removeFromCart } = useContext(CartContext);
-//   console.log('1111', cartItem)
 
   return (
     <div className="flex items-center justify-center">

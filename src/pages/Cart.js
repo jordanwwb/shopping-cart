@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const { cartItems, getCartTotal } = useContext(CartContext);
-  // console.log('5', cartItems)
-  // console.log('6', getCartTotal())
 
   return (
     <div className="container mx-auto p-6">

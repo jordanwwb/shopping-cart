@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchProductsByCategory } from "../../apis/productApi";
 import ProductCard from "./ProductCard";
-import Slider from 'react-slick';
 
 const ProductByCategory = ({ category }) => {
     const [products, setProducts] = useState([]);

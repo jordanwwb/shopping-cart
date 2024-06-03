@@ -7,7 +7,6 @@ export const CartProvider = ({ children }) => {
 
     const addToCart = (item) => {
         const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
-        // console.log('4', isItemInCart)
         if (isItemInCart) {
             setCartItems(
                 cartItems.map((cartItem) =>
@@ -16,11 +15,8 @@ export const CartProvider = ({ children }) => {
                         : cartItem
                 )
             );
-            //   console.log("ERROR HERE")
         } else {
-            // console.log("ERROR HERE 1")
             setCartItems([...cartItems, { ...item, quantity: 1 }]);
-            //   console.log("ERROR HERE 2")
         }
     };
 

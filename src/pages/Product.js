@@ -35,10 +35,7 @@ const Product = () => {
     getProduct();
   }, [id]);
 
-  // console.log('1', cartItems)
   const currentItem = product ? cartItems.find(item => item.id === product.id) : null;
-  // console.log('2', currentItem)
-  // console.log('related products', relatedProducts)
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
